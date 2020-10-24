@@ -7,7 +7,7 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import { useHistory } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({}) => {
   const history = useHistory();
   const [value, setValue] = React.useState(0);
   const routeTo = (route) => {

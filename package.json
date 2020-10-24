@@ -31,5 +31,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "proxy": "https://16fd1sv7x3.execute-api.us-east-2.amazonaws.com/"
 }

@@ -16,14 +16,12 @@ import Nav from "./components/Nav/Nav";
 const App = () => {
   return (
     <div id="app">
-      <Router>
-        <Switch>
-          <Route path="/feedview" component={FeedView}></Route>
-          <Route path="/editview" component={EditView}></Route>
-          <Route path="/listingview" component={ListingView}></Route>
-        </Switch>
-        <Nav />
-      </Router>
+      <Switch>
+        <Route path="/feedview" component={FeedView}></Route>
+        <Route path="/editview" component={EditView}></Route>
+        <Route path="/listingview" component={ListingView}></Route>
+      </Switch>
+      <Nav />
     </div>
   );
 };

@@ -8,12 +8,7 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 import Nav from "../Nav/Nav";
 
 const FeedView = () => {
-  return (
-    <div className="FeedView">
-      This is the feed
-      <Nav />
-    </div>
-  );
+  return <div className="FeedView">This is the feed</div>;
 };
 
 FeedView.propTypes = {};

@@ -4,10 +4,7 @@ import "./ListingView.css";
 import Nav from "../Nav/Nav";
 
 const ListingView = () => (
-  <div className="ListingView">
-    ListingView Component
-    <Nav />
-  </div>
+  <div className="ListingView">ListingView Component</div>
 );
 
 ListingView.propTypes = {};

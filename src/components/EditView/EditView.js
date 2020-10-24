@@ -3,12 +3,7 @@ import PropTypes from "prop-types";
 import "./EditView.css";
 import Nav from "../Nav/Nav";
 
-const EditView = () => (
-  <div className="EditView">
-    EditView Component
-    <Nav />
-  </div>
-);
+const EditView = () => <div className="EditView">EditView Component</div>;
 
 EditView.propTypes = {};
 

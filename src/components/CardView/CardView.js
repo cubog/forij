@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { useHistory } from "react-router-dom";
 import car from "../../assets/car.svg";
 import box from "../../assets/box.svg";
+import check from "../../assets/check.svg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -83,8 +84,11 @@ const CardView = ({ item }) => {
                   </Typography>
                 </Grid>
                 <Grid item>
-                  <img src={car} />
-                  <img src={box} />
+                  {item.stocked && <img src={car} />}
+                  {item.collected && <img src={box} />}
+                  {item.delivered && item.checked && item.stocked && (
+                    <img src={check} />
+                  )}
                 </Grid>
               </Grid>
               {/* <Grid item>

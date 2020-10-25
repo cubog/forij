@@ -53,12 +53,19 @@ const CardView = ({ item }) => {
           <MDBCard onClick={() => viewListing(item.id)}>
             <MDBCardImage className="img-fluid" src={item.logo} waves />
             <MDBCardBody>
-              <MDBCardTitle>Card title</MDBCardTitle>
+              <MDBCardTitle>{item.Name}</MDBCardTitle>
+              <MDBCardText></MDBCardText>
               <MDBCardText>
-                Some quick example text to build on the card title and make up
-                the bulk of the card&apos;s content.
+                Pickup: {item["pick-up-from"]} to {item["pick-up-until"]}
               </MDBCardText>
-              <MDBBtn href="#">MDBBtn</MDBBtn>
+              <MDBCardText>Address: {item.address}</MDBCardText>
+              <Grid item>
+                {item.stocked && <img src={car} />}
+                {item.collected && <img src={box} />}
+                {item.delivered && item.checked && item.stocked && (
+                  <img src={check} />
+                )}
+              </Grid>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
@@ -106,13 +113,7 @@ const CardView = ({ item }) => {
                     {item.address}
                   </Typography>
                 </Grid>
-                <Grid item>
-                  {item.stocked && <img src={car} />}
-                  {item.collected && <img src={box} />}
-                  {item.delivered && item.checked && item.stocked && (
-                    <img src={check} />
-                  )}
-                </Grid>
+  
               </Grid>
               <Grid item>
                 <img src={item.logo} />

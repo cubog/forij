@@ -8,10 +8,13 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 
 import registerServiceWorker from "./registerServiceWorker";
+import { ListProvider } from "./providers/ListProviders";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <ListProvider>
+      <App />
+    </ListProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );

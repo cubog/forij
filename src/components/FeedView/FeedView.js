@@ -29,7 +29,7 @@ const FeedView = () => {
   }, [donations]);
 
   const getDonations = async () => {
-    fetch("default/getDonationsList", {
+    fetch("default/getDonationsBucketItems", {
       method: "GET", // *GET, POST, PUT, DELETE, etc. // no-cors, *cors, same-origin\
     })
       .then((response) => response.json())

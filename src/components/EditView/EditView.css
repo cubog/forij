@@ -1,1 +1,3 @@
-.EditView {}
+.EditView {
+  /* overflow-y: scroll; */
+}

@@ -5,6 +5,7 @@ import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import RestoreIcon from "@material-ui/icons/Restore";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
+import AddIcon from "@material-ui/icons/Add";
 import { useHistory } from "react-router-dom";
 
 const Nav = ({}) => {
@@ -24,24 +25,24 @@ const Nav = ({}) => {
         className="bottom-navigation"
       >
         <BottomNavigationAction
-          label="Recents"
-          icon={<RestoreIcon />}
+          // label="Recents"
+          icon={<FavoriteIcon />}
           onClick={() => {
             routeTo("/feedview");
           }}
         />
         <BottomNavigationAction
-          label="Favorites"
-          icon={<FavoriteIcon />}
+          // label="Add Donation"
+          icon={<AddIcon />}
           onClick={() => {
-            routeTo("/listingview");
+            routeTo("/editview");
           }}
         />
         <BottomNavigationAction
           label="Nearby"
           icon={<LocationOnIcon />}
           onClick={() => {
-            routeTo("/editview");
+            routeTo("/listing");
           }}
         />
       </BottomNavigation>

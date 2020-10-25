@@ -42,7 +42,7 @@ const Nav = ({}) => {
           // label="Nearby"
           icon={<BarchartIcon />}
           onClick={() => {
-            routeTo("/listingview");
+            routeTo("/leaderboard");
           }}
         />
       </BottomNavigation>

@@ -52,10 +52,12 @@ const CardView = ({ item }) => {
               </MDBCardText>
               <MDBCardText>Address: {item.address}</MDBCardText>
               <Grid item>
-                {item.stocked && <img src={car} />}
-                {item.collected && <img src={box} />}
+                {item.stocked && <img style={{ marginRight: 10 }} src={car} />}
+                {item.collected && (
+                  <img style={{ marginRight: 10 }} src={box} />
+                )}
                 {item.delivered && item.checked && item.stocked && (
-                  <img src={check} />
+                  <img style={{ marginRight: 10 }} src={check} />
                 )}
               </Grid>
             </MDBCardBody>

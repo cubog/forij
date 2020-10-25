@@ -23,7 +23,7 @@ const EditView = ({ title, history }) => {
       }
     });
     const donation = {
-      name,
+      Name: name,
       items: addedItem,
       "pick-up-from": from,
       "pick-up-until": until,
@@ -54,7 +54,7 @@ const EditView = ({ title, history }) => {
         <MDBCol md="6">
           <form onSubmit={handleSubmit(onSubmit)} style={{ paddingTop: 10 }}>
             <p className="h4 text-center mb-4">{title || "Create donation"}</p>
-            <FormInput title="Description" id="Name" register={register} />
+            <FormInput title="Description" id="name" register={register} />
             <FormInput
               title="Donation Items"
               id="item"

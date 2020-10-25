@@ -30,6 +30,16 @@ const EditView = ({ title }) => {
                 register={register}
               />
               <br />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <label className="grey-text">Image</label>
+                <input
+                  style={{ marginBottom: 20, width: 150 }}
+                  type="file"
+                  // value="Upload Image"
+                  name="image"
+                />
+              </div>
+              <br />
               <label className="grey-text">Pick-up Window</label>
               <DateInput title="From" register={register} name="from" />
               <DateInput title="Until" register={register} name="until" />

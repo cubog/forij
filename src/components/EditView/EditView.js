@@ -9,9 +9,20 @@ import { useForm, Controller } from "react-hook-form";
 
 const EditView = ({ title }) => {
   const [items, addItem] = useState(1);
+  const [img, setImg] = useState();
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => {
     console.log(data);
+  };
+
+  const onImageChange = (event) => {
+    if (event.target.files && event.target.files[0]) {
+      let reader = new FileReader();
+      reader.onload = (e) => {
+        setImg(e.target.result);
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
   };
   return (
     <div className="EditView" style={{ paddingBottom: 70 }}>
@@ -30,10 +41,18 @@ const EditView = ({ title }) => {
             <div style={{ display: "flex", flexDirection: "column" }}>
               <label className="grey-text">Image</label>
               <input
-                style={{ marginBottom: 20, width: 150 }}
+                style={{ marginBottom: 20, width: 100 }}
                 type="file"
                 name="image"
+                onChange={onImageChange}
               />
+              {img && (
+                <MDBRow className="mb-4">
+                  <MDBCol md="4">
+                    <img src={img} className="img-fluid" alt="" />
+                  </MDBCol>
+                </MDBRow>
+              )}
             </div>
             <br />
             <label className="grey-text">Pick-up Window</label>

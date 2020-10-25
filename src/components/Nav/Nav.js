@@ -42,7 +42,7 @@ const Nav = ({}) => {
           label="Nearby"
           icon={<LocationOnIcon />}
           onClick={() => {
-            routeTo("/listing");
+            routeTo("/listingview");
           }}
         />
       </BottomNavigation>

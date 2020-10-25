@@ -10,7 +10,7 @@ const FormInput = ({ title, id, addInput, items = 1, register }) => {
   for (let i = 0; i < items; i++) {
     inputs.push(
       <input
-        style={items > 1 ? { marginBottom: 10 } : {}}
+        style={{ marginBottom: 10 }}
         type="text"
         name={id + (items > 1 ? i : "")}
         className="form-control"

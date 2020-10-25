@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import "./FeedView.css";
 import { Grid, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import CardView from "../CardView/CardView";
+import { store } from "../../providers/ListProviders";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,11 +20,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const FeedView = () => {
+  const { list: donations, setList } = useContext(store);
   const classes = useStyles();
-  const [donations, setDonations] = useState(null);
+
+  console.log("list", donations);
 
   useEffect(() => {
-    if (donations === null) {
+    if (!donations) {
       getDonations();
     }
   }, [donations]);
@@ -34,7 +37,7 @@ const FeedView = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        setDonations(data);
+        setList(data);
         console.log("Success:", data);
       })
       .catch((error) => {
@@ -45,7 +48,8 @@ const FeedView = () => {
     <div className="FeedView">
       <div className={classes.root}>
         <Grid container spacing={3}>
-          {donations !== null &&
+          {donations &&
+            donations.length &&
             donations.map((item) => {
               console.log("item", item);
               return (

@@ -4,7 +4,7 @@ import "./Nav.css";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import RestoreIcon from "@material-ui/icons/Restore";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
+import BarchartIcon from "@material-ui/icons/BarChartSharp";
 import AddIcon from "@material-ui/icons/Add";
 import { useHistory } from "react-router-dom";
 
@@ -39,8 +39,8 @@ const Nav = ({}) => {
           }}
         />
         <BottomNavigationAction
-          label="Nearby"
-          icon={<LocationOnIcon />}
+          // label="Nearby"
+          icon={<BarchartIcon />}
           onClick={() => {
             routeTo("/listing");
           }}

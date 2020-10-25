@@ -50,7 +50,7 @@ const CardView = ({ item }) => {
     <div className="CardView">
       <div className={classes.root}>
         <MDBCol>
-          <MDBCard>
+          <MDBCard onClick={() => viewListing(item.id)}>
             <MDBCardImage className="img-fluid" src={item.logo} waves />
             <MDBCardBody>
               <MDBCardTitle>Card title</MDBCardTitle>

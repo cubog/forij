@@ -50,7 +50,7 @@ const CardView = ({ item }) => {
     <div className="CardView">
       <div className={classes.root}>
         <MDBCol>
-          <MDBCard style={{ width: "22rem" }}>
+          <MDBCard>
             <MDBCardImage className="img-fluid" src={item.logo} waves />
             <MDBCardBody>
               <MDBCardTitle>Card title</MDBCardTitle>

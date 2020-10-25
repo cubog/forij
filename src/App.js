@@ -19,7 +19,7 @@ const App = () => {
       <Switch>
         <Route path="/feedview" component={FeedView}></Route>
         <Route path="/editview" component={EditView}></Route>
-        <Route path="/listingview" component={ListingView}></Route>
+        <Route path="/listingview/:id" component={ListingView}></Route>
       </Switch>
       <Nav />
     </div>

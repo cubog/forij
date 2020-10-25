@@ -23,28 +23,20 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(2),
-    // height: 150,
     margin: "10px 20px",
     textAlign: "left",
     color: theme.palette.text.secondary,
   },
   image: {
     width: 128,
-    // height: 128,
   },
-  // img: {
-  //   margin: "auto",
-  //   display: "block",
-  //   maxWidth: "100%",
-  //   maxHeight: "100%",
-  // },
 }));
 
 const CardView = ({ item }) => {
   const history = useHistory();
   const classes = useStyles();
   const viewListing = (id) => {
-    history && history.push(`/listingview?id=${id}`);
+    history && history.push(`/listingview/${id}`);
   };
   return (
     <div className="CardView">

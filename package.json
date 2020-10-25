@@ -31,5 +31,6 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+  "homepage": "https://www.forij.ml/",
   "proxy": "https://16fd1sv7x3.execute-api.us-east-2.amazonaws.com/"
 }

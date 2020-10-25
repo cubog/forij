@@ -12,7 +12,7 @@ const ListingView = ({ title, match, history }) => {
     console.log("item", item);
     return item.id === parseInt(params.id);
   });
-  console.log("donation", donation);
+
   return (
     <div className="ListingView" style={{ paddingBottom: 70 }}>
       <MDBContainer>
@@ -33,26 +33,26 @@ const ListingView = ({ title, match, history }) => {
             {donation["pick-up-from"]} to {donation["pick-up-until"]}
           </p>
           <label className="grey-text">Tasks to fulfill:</label>
-          <div class="custom-control custom-checkbox">
+          <div className="custom-control custom-checkbox">
             <input
               type="checkbox"
-              class="custom-control-input"
+              className="custom-control-input"
               id="defaultChecked1"
               onClick={(e) => {
                 // donation["collected"] = e.target.checked;
               }}
             />
-            <label class="custom-control-label" for="defaultChecked1">
+            <label className="custom-control-label" htmlFor="defaultChecked1">
               Pickup and Deliver
             </label>
           </div>
           <div class="custom-control custom-checkbox">
             <input
               type="checkbox"
-              class="custom-control-input"
+              className="custom-control-input"
               id="defaultChecked2"
             />
-            <label class="custom-control-label" for="defaultChecked2">
+            <label className="custom-control-label" htmlFor="defaultChecked2">
               Sort at facility
             </label>
           </div>

@@ -43,7 +43,6 @@ const FeedView = () => {
   };
   return (
     <div className="FeedView">
-      This is the feed
       <div className={classes.root}>
         <Grid container spacing={3}>
           {donations !== null &&

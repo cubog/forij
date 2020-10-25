@@ -7,6 +7,15 @@ import { useHistory } from "react-router-dom";
 import car from "../../assets/car.svg";
 import box from "../../assets/box.svg";
 import check from "../../assets/check.svg";
+import {
+  MDBBtn,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCol,
+} from "mdbreact";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,12 +49,30 @@ const CardView = ({ item }) => {
   return (
     <div className="CardView">
       <div className={classes.root}>
-        <Paper
+        <MDBCol>
+          <MDBCard style={{ width: "22rem" }}>
+            <MDBCardImage
+              className="img-fluid"
+              src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg"
+              waves
+            />
+            <MDBCardBody>
+              <MDBCardTitle>Card title</MDBCardTitle>
+              <MDBCardText>
+                Some quick example text to build on the card title and make up
+                the bulk of the card&apos;s content.
+              </MDBCardText>
+              <MDBBtn href="#">MDBBtn</MDBBtn>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+        {/* <Paper
           className={classes.paper}
           onClick={() => {
             viewListing(item.id);
           }}
         >
+
           <Grid container spacing={2}>
             {/* <Grid item>
               <ButtonBase className={classes.image}>
@@ -55,7 +82,7 @@ const CardView = ({ item }) => {
                   src="/static/images/grid/complex.jpg"
                 />
               </ButtonBase>
-            </Grid> */}
+            </Grid> 
             <Grid item xs={12} sm container>
               <Grid item xs container direction="column" spacing={2}>
                 <Grid item xs>
@@ -91,12 +118,12 @@ const CardView = ({ item }) => {
                   )}
                 </Grid>
               </Grid>
-              {/* <Grid item>
-                <Typography variant="subtitle1">$19.00</Typography>
-              </Grid> */}
+              <Grid item>
+                <img src={item.logo} />
+              </Grid>
             </Grid>
           </Grid>
-        </Paper>
+        </Paper> */}
       </div>
     </div>
   );

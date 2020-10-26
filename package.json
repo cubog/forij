@@ -2,7 +2,6 @@
   "name": "your-app",
   "version": "0.1.0",
   "private": true,
-  "// If You want to install mdbreact from our GitLab repository, please replace '4.27.0' with gitURL provided here ->": "git+https://oauth2:<YOUR-TOKEN-GOES-HERE>@git.mdbootstrap.com/mdb/react/re-pro.git",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -30,7 +29,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "homepage": "https://www.forij.ml/",
-  "proxy": "https://16fd1sv7x3.execute-api.us-east-2.amazonaws.com/"
+  ]
 }
